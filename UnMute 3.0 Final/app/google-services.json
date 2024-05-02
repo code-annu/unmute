@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "445329016236",
+    "project_id": "unmute3-71b38",
+    "storage_bucket": "unmute3-71b38.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:445329016236:android:144b24b9b353d90973a609",
+        "android_client_info": {
+          "package_name": "com.pracitice.unmutetrackuplaoder"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyClowax-_oprYyR7Yus7ljo5xfEaUl8L_A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:445329016236:android:3510174af5fc0d3573a609",
+        "android_client_info": {
+          "package_name": "developer.anurag.unmute3"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyClowax-_oprYyR7Yus7ljo5xfEaUl8L_A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/fragment_playing_playlist_bg"
+    android:layout_height="500dp"
+    
+    tools:context=".fragments.PlayingPlaylistFragment">
+
+    <View
+        android:id="@+id/fppCloseFragmentView"
+        android:layout_width="50dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/close_bottom_sheet_fragment_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/fppNowPlayingTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/roboto_regular"
+        android:textSize="16sp"
+        android:textColor="@color/primaryWhite"
+        android:text="@string/fp_now_playing"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fppCloseFragmentView"/>
+
+    <View
+        android:id="@+id/fppNowPlayingTVBottomBorderView"
+        android:layout_width="0dp"
+        android:layout_height=".5dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/primaryBlack"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fppNowPlayingTV"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/fppPlayingPlaylistContainerRV"
+        android:layout_width="0dp"
+        android:layout_height="500dp"
+        android:paddingTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fppNowPlayingTV"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

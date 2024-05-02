@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/ptvMainContainerCL"
+    android:background="@drawable/track_view_bg"
+    android:padding="10dp"
+    android:clickable="true"
+    android:focusable="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ptvTrackPosterSIV"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:shapeAppearanceOverlay="@style/TrackPosterSIVStyle"
+        android:src="@color/secondaryBlack"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/ptvTrackInfoFlow"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_marginStart="10dp"
+        app:constraint_referenced_ids="ptvTrackTitleTV,ptvTrackArtistTV"
+        app:layout_constraintStart_toEndOf="@id/ptvTrackPosterSIV"
+        app:layout_constraintEnd_toStartOf="@id/ptvDragTrackIB"
+        app:layout_constraintTop_toTopOf="@id/ptvTrackPosterSIV"
+        app:layout_constraintBottom_toBottomOf="@id/ptvTrackPosterSIV"/>
+
+    <TextView
+        android:id="@+id/ptvTrackTitleTV"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="bottom"
+        style="@style/STV_TrackTitleTVStyle"/>
+
+    <TextView
+        android:id="@+id/ptvTrackArtistTV"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="top"
+        style="@style/STV_TrackArtistTVStyle"/>
+
+    <ImageButton
+        android:id="@+id/ptvDragTrackIB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/action_button_bg"
+        android:padding="10dp"
+        android:contentDescription="@string/image_desc"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/drag_handle_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ptvTrackPosterSIV"
+        app:layout_constraintBottom_toBottomOf="@id/ptvTrackPosterSIV"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

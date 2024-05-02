@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/primaryBlack"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.PlayerFragment">
+
+    <ImageButton
+        android:id="@+id/fpClosePlayerFragmentIB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/action_button_bg"
+        android:src="@drawable/expand_icon"
+        android:contentDescription="@string/image_desc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    
+    <TextView
+        android:id="@+id/fpNowPlayingTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fp_now_playing"
+        android:textColor="@color/primaryWhite"
+        android:fontFamily="@font/roboto_medium"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/fpClosePlayerFragmentIB"
+        app:layout_constraintBottom_toBottomOf="@id/fpClosePlayerFragmentIB"/>
+
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:id="@+id/fpTrackPosterCV"-->
+<!--        android:layout_width="350dp"-->
+<!--        android:layout_height="350dp"-->
+<!--        app:cardCornerRadius="10dp"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintVertical_bias=".2"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/fpNowPlayingTV"-->
+<!--        app:layout_constraintBottom_toTopOf="@id/fpPlayerActionsFlow">-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/fpTrackPosterIV"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:src="@drawable/track_view_poster_loader"-->
+<!--            android:contentDescription="@string/image_desc"/>-->
+<!--    </androidx.cardview.widget.CardView>-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/fpTrackPostersContainerRV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/fpNowPlayingTV"
+        app:layout_constraintBottom_toTopOf="@id/fpPlayerActionsFlow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias=".2"/>
+
+        <TextView
+            android:id="@+id/fpTrackTitleTV"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="15dp"
+            android:ellipsize="marquee"
+            android:fontFamily="@font/roboto_regular"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:maxLines="1"
+            android:textColor="@color/primaryWhite"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@id/fpTrackArtistTV"
+            app:layout_constraintEnd_toStartOf="@+id/fpPlaylistIB"
+            app:layout_constraintStart_toStartOf="@id/fpPlayerSeekbar"
+            app:layout_constraintHorizontal_bias="0"/>
+
+        <TextView
+            android:id="@+id/fpTrackArtistTV"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginBottom="15dp"
+            android:ellipsize="marquee"
+            android:fontFamily="@font/poppins_regular"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:maxLines="1"
+            android:textColor="@color/graphite"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toTopOf="@id/fpPlayerSeekbar"
+            app:layout_constraintEnd_toStartOf="@+id/fpPlaylistIB"
+            app:layout_constraintStart_toStartOf="@id/fpPlayerSeekbar"
+            app:layout_constraintHorizontal_bias="0"/>
+
+        <ImageButton
+            android:id="@+id/fpPlaylistIB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/image_desc"
+            android:layout_marginEnd="15dp"
+            android:src="@drawable/playlist_icon"
+            android:background="@drawable/action_button_bg"
+            android:padding="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintEnd_toEndOf="@id/fpPlayerSeekbar"
+            app:layout_constraintBottom_toBottomOf="@id/fpTrackArtistTV"
+            app:layout_constraintTop_toTopOf="@id/fpTrackTitleTV"/>
+
+        <androidx.appcompat.widget.AppCompatSeekBar
+            android:id="@+id/fpPlayerSeekbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:maxHeight="2dp"
+            android:min="0"
+            android:splitTrack="false"
+            android:progress="30"
+            android:progressDrawable="@drawable/custom_seekbar"
+            android:thumb="@drawable/custom_seekbar_thumb"
+            app:layout_constraintVertical_bias=".7"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fpTrackPostersContainerRV"
+            app:layout_constraintBottom_toTopOf="@id/fpPlayerActionsFlow"
+            tools:targetApi="o" />
+
+        <TextView
+            android:id="@+id/fpPlayerPlayedDurationTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/graphite"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@id/fpTrackArtistTV"
+            app:layout_constraintTop_toBottomOf="@id/fpPlayerSeekbar"/>
+
+        <TextView
+            android:id="@+id/fpTrackDurationTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/graphite"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@id/fpPlaylistIB"
+            app:layout_constraintTop_toBottomOf="@id/fpPlayerSeekbar"/>
+
+
+
+        <androidx.constraintlayout.helper.widget.Flow
+            android:id="@+id/fpPlayerActionsFlow"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            app:constraint_referenced_ids="fpPreviousIB,fpPlayPauseIB,fpNextIB"
+            app:flow_horizontalGap="10dp"
+            app:flow_horizontalStyle="packed"
+            app:flow_wrapMode="chain"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageButton
+            android:id="@+id/fpPlayPauseIB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:contentDescription="@string/image_desc"
+            android:src="@drawable/play_circle_icon"
+            android:background="@android:color/transparent"/>
+
+        <ImageButton
+            android:id="@+id/fpPreviousIB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:contentDescription="@string/image_desc"
+            android:src="@drawable/previous_icon"
+            android:background="@drawable/action_button_bg"/>
+
+        <ImageButton
+            android:id="@+id/fpNextIB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:contentDescription="@string/image_desc"
+            android:src="@drawable/next_icon"
+            android:background="@drawable/action_button_bg"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

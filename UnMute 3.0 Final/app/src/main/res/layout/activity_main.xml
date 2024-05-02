@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primaryBlack"
+    tools:context=".MainActivity">
+
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/amMainFragmentContainerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/amMiniPlayerCL"/>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/amMiniPlayerCL"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:paddingStart="20dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="10dp"
+        android:paddingEnd="20dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@color/secondaryBlack"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/amBottomNavigationViewTopBorderView">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/mpTrackPosterIV"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:shapeAppearanceOverlay="@style/TrackPosterSIVStyle"
+            android:scaleType="centerCrop"
+            android:src="@color/primaryBlack"
+            android:contentDescription="@string/image_desc"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.constraintlayout.helper.widget.Flow
+            android:id="@+id/mpTrackInfoFlow"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="10dp"
+            android:orientation="vertical"
+            app:constraint_referenced_ids="mpTrackTitleTV,mpTrackArtistTV"
+            app:layout_constraintStart_toEndOf="@id/mpTrackPosterIV"
+            app:layout_constraintTop_toTopOf="@id/mpTrackPosterIV"
+            app:layout_constraintBottom_toBottomOf="@id/mpTrackPosterIV"
+            app:layout_constraintEnd_toStartOf="@id/mpPlayPauseIVBtn"/>
+
+        <TextView
+            android:id="@+id/mpTrackTitleTV"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="bottom"
+            android:textColor="@color/primaryWhite"
+            android:fontFamily="@font/roboto_regular"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/mpTrackArtistTV"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="top"
+            android:textSize="12sp"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/graphite"
+            />
+
+        <ImageView
+            android:id="@+id/mpPlayPauseIVBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/pause_icon"
+            android:contentDescription="@string/image_desc"
+            android:padding="5dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/action_button_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/mpTrackPosterIV"
+            app:layout_constraintBottom_toBottomOf="@id/mpTrackPosterIV"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/amBottomNavigationViewTopBorderView"
+        android:layout_width="0dp"
+        android:layout_height=".05dp"
+        android:background="@color/primaryBlack"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/amBottomNavigationView"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/amBottomNavigationView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        app:menu="@menu/bottom_navigation_menu"
+        app:itemTextAppearanceActive="@style/MA_BNV_ActiveItemTextStyle"
+        app:itemTextAppearanceInactive="@style/MA_BNV_InActiveItemTextStyle"
+        app:itemIconTint="@color/bottom_navigation_icon_color"
+        app:itemTextAppearanceActiveBoldEnabled="false"
+        android:background="@color/secondaryBlack"
+        app:itemIconSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

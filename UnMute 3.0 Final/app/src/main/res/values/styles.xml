@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Global Styles -->
+    <style name="STV_TrackTitleTVStyle">
+        <item name="android:textColor">@color/primaryWhite</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+    </style>
+
+    <style name="STV_TrackArtistTVStyle">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/graphite</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="TrackPosterSIVStyle">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">5%</item>
+    </style>
+
+    <!-- Playing Playlist Fragment Style and Theme -->
+    <style name="PlayingPlaylistFragmentTheme" parent="Theme.Design.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/PlayingPlaylistFragmentStyle</item>
+    </style>
+    <style name="PlayingPlaylistFragmentStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/fragment_playing_playlist_bg</item>
+    </style>
+
+    <style name="TransparentButtonStyle">
+        <item name="android:textColor">@color/primaryWhite</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:background">@drawable/transparent_button_bg</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:paddingEnd">10dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <!-- Bottom Navigation Styles -->
+    <style name="MA_BNV_ActiveItemTextStyle">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/primaryWhite</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+    </style>
+
+    <style name="MA_BNV_InActiveItemTextStyle">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/graphite</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+    </style>
+
+
+    <!-- Home Fragment Styles -->
+    <style name="FH_TracksGroupTitleTVStyle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:textColor">@color/primaryWhite</item>
+    </style>
+
+
+
+</resources>

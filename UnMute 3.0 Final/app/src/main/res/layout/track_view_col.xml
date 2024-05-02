@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/tvcMainContainerLL"
+    android:orientation="vertical"
+    android:clickable="true"
+    android:focusable="true"
+    android:padding="10dp"
+    android:background="@drawable/track_view_bg"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/tvcTrackPosterSIV"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/track_view_poster_loader"
+        app:shapeAppearanceOverlay="@style/TrackPosterSIVStyle"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/image_desc"/>
+
+    <TextView
+        android:id="@+id/tvcTrackTitleTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        style="@style/STV_TrackTitleTVStyle"/>
+
+</LinearLayout>

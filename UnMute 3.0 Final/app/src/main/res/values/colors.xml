@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primaryWhite">#FEFEFF</color>
+    <color name="graphite">#868689</color>
+    <color name="primaryBlack">#19191B</color>
+    <color name="secondaryBlack">#27272A</color>
+    <color name="trackViewClickBGColor">#CC0C0B0B</color>
+</resources>

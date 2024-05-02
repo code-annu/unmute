@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Un Mute 3.0</string>
+    <string name="image_desc">Image</string>
+    <string name="functionality_not_implemented">Functionality not Implemented!</string>
+
+
+
+
+    <!-- Bottom Navigation Menu Items -->
+    <string name="home">Home</string>
+    <string name="search">Search</string>
+    <string name="library">Library</string>
+
+    <!-- Fragment Home Strings -->
+    <string name="mixing">Mixing</string>
+    <string name="quick_picks">Quick Picks</string>
+    <string name="play_all">Play all</string>
+    <string name="random_picks">Random picks</string>
+
+    <!-- Fragment Search Strings -->
+    <string name="fs_search_view_hint_query">Search songs,artists ....</string>
+
+    <!-- Fragment Player Strings -->
+    <string name="fp_now_playing">Now Playing</string>
+
+
+</resources>
